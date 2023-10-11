@@ -1,0 +1,30 @@
+query GalleryQuery {
+	galleries {
+		edges {
+			node {
+				databaseId
+				title
+				featuredImage {
+					node {
+						sourceUrl
+					}
+				}
+				gallery {
+					list {
+						image {
+							sourceUrl
+						}
+					}
+				}
+				galleryCategories {
+					edges {
+						node {
+							databaseId
+							name
+						}
+					}
+				}
+			}
+		}
+	}
+}

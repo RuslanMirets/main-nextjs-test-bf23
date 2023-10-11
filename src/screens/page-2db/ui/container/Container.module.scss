@@ -1,0 +1,17 @@
+.root {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+
+	@media (max-width: 1172px) {
+		max-width: 826px;
+	}
+
+	@media (max-width: 858px) {
+		max-width: 708px;
+	}
+
+	@media (max-width: 740px) {
+		max-width: 340px;
+	}
+}

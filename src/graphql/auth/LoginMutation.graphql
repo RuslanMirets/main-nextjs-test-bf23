@@ -1,0 +1,16 @@
+mutation LoginMutation($input: LoginInput!) {
+	login(input: $input) {
+		authToken
+		refreshToken
+		userData: user {
+			email
+			name
+			firstName
+			lastName
+			username
+			billing {
+				phone
+			}
+		}
+	}
+}

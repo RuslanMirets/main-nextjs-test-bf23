@@ -1,0 +1,22 @@
+.root {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+
+	@media (max-width: 1172px) {
+		font-size: 32px;
+		line-height: 32px;
+	}
+
+	@media (max-width: 858px) {
+		font-size: 24px;
+		line-height: 24px;
+	}
+
+	@media (max-width: 740px) {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 20px;
+		text-transform: uppercase;
+	}
+}

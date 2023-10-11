@@ -1,0 +1,99 @@
+.root {
+	position: sticky;
+	z-index: 1040;
+	top: 0;
+	background-color: #231f20;
+	font-size: 14px;
+	line-height: 21px;
+	color: #fff;
+}
+
+.container {
+	width: 100%;
+	padding: 0 15px;
+	margin: 0 auto;
+
+	@media (min-width: 320px) {
+		width: 320px;
+	}
+
+	@media (min-width: 640px) {
+		width: 640px;
+	}
+
+	@media (min-width: 1024px) {
+		width: 960px;
+	}
+
+	@media (min-width: 1200px) {
+		width: 1200px;
+	}
+}
+
+.body {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 10px 0;
+}
+
+.left {
+	@media (min-width: 1200px) {
+		flex-shrink: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+
+.center {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	width: 100%;
+	max-width: 425px;
+	background-color: #231f20;
+	padding: 50px 10px 10px 10px;
+	transform: translateX(100%);
+	overflow-y: auto;
+	transition: transform 0.3s ease-in-out;
+
+	&.active {
+		transform: translateX(0);
+	}
+
+	@media (min-width: 1200px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: static;
+		max-width: 100%;
+		padding: 0;
+		overflow-y: initial;
+		transform: initial;
+	}
+}
+
+.right {
+	display: none;
+
+	@media (min-width: 1200px) {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+}
+
+.phone {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	.phoneBtn {
+		padding: 5px 10px;
+		border-radius: 20px;
+		border: 2px solid #5226fd;
+	}
+}

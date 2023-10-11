@@ -1,0 +1,10 @@
+query ExpansionSetsQuery {
+	products(where: { categoryId: 409 }) {
+		edges {
+			node {
+				databaseId
+				name
+			}
+		}
+	}
+}

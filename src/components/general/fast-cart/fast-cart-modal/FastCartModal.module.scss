@@ -1,0 +1,37 @@
+.form {
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.box {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding: 24px 16px;
+	border: 1px solid #ccc;
+	border-radius: 16px;
+}
+
+.privacy {
+	a {
+		text-decoration: underline;
+	}
+}
+
+.agreements {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.agreementCheckbox {
+	a {
+		text-decoration: underline;
+	}
+}
+
+.submit {
+	align-self: center;
+}

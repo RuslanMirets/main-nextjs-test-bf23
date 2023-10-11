@@ -1,0 +1,170 @@
+.root {
+	margin-bottom: 114px;
+
+	@media (max-width: 1172px) {
+		margin-bottom: 66px;
+	}
+
+	@media (max-width: 868px) {
+		margin-bottom: 50px;
+	}
+
+	@media (max-width: 740px) {
+		margin-bottom: 16px;
+	}
+}
+
+.title {
+	margin-bottom: 58px;
+
+	@media (max-width: 1172px) {
+		margin-bottom: 46px;
+	}
+
+	@media (max-width: 740px) {
+		margin-bottom: 20px;
+	}
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+
+	li {
+		border-top: 2px solid #181818;
+
+		&:last-child {
+			border-bottom: 2px solid #181818;
+
+			@media (max-width: 740px) {
+				border-bottom: none;
+			}
+		}
+
+		&:not(:last-child) {
+			@media (max-width: 740px) {
+				border-bottom: 1px solid #181818;
+			}
+		}
+
+		@media (max-width: 740px) {
+			border-top: none;
+		}
+	}
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	padding: 18px max(0px, calc((100% - 1140px) / 2));
+
+	@media (max-width: 1172px) {
+		padding: 12px max(0px, calc((100% - 826px) / 2));
+	}
+
+	@media (max-width: 858px) {
+		padding: 12px max(0px, calc((100% - 708px) / 2));
+	}
+
+	@media (max-width: 740px) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+		padding: 10px max(0px, calc((100% - 340px) / 2));
+	}
+}
+
+.itemLeft {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+
+	@media (max-width: 740px) {
+		gap: 16px;
+	}
+}
+
+.itemImage {
+	width: 140px;
+	height: 140px;
+	border-radius: 10px;
+	flex-shrink: 0;
+
+	@media (max-width: 1172px) {
+		width: 124px;
+		height: 124px;
+	}
+
+	@media (max-width: 740px) {
+		width: 64px;
+		height: 64px;
+	}
+}
+
+.itemInfo {
+	font-size: 32px;
+	line-height: 32px;
+	width: 100%;
+	max-width: 300px;
+	flex-shrink: 0;
+
+	@media (max-width: 1172px) {
+		font-size: 20px;
+		line-height: 20px;
+		max-width: 268px;
+	}
+
+	@media (max-width: 858px) {
+		max-width: 220px;
+		max-width: 100%;
+	}
+}
+
+.itemCaption {
+	margin-bottom: 14px;
+	font-weight: 700;
+
+	@media (max-width: 740px) {
+		margin-bottom: 10px;
+		font-size: 15px;
+		line-height: 15px;
+	}
+}
+
+.itemTitle {
+	font-weight: 500;
+
+	@media (max-width: 858px) {
+		font-size: 16px;
+		line-height: 16px;
+	}
+
+	@media (max-width: 740px) {
+		font-size: 12px;
+		line-height: 12px;
+	}
+}
+
+.itemDescription {
+	margin-left: auto;
+	max-width: 524px;
+	font-size: 24px;
+	line-height: 24px;
+
+	@media (max-width: 1172px) {
+		font-size: 16px;
+		line-height: 16px;
+		max-width: 350px;
+	}
+
+	@media (max-width: 858px) {
+		font-size: 14px;
+		line-height: 14px;
+		max-width: 258px;
+	}
+
+	@media (max-width: 740px) {
+		max-width: 100%;
+	}
+}

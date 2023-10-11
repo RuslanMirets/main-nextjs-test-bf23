@@ -1,0 +1,51 @@
+.root {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	padding: 3px;
+	cursor: pointer;
+
+	.body {
+		position: relative;
+		width: 100%;
+
+		span {
+			content: "";
+			position: absolute;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			border-radius: 0;
+			transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+			&:nth-child(1) {
+				top: 0;
+				transform: translate3d(0, -5px, 0);
+			}
+			&:nth-child(2) {
+				top: 0;
+				transform: translate3d(0, 5px, 0);
+			}
+		}
+	}
+
+	&.active {
+		.body {
+			span {
+				&:nth-child(1) {
+					transform: rotate(-45deg) translate3d(0, 0, 0);
+				}
+				&:nth-child(2) {
+					transform: rotate(45deg) translate3d(0, 0, 0);
+				}
+			}
+		}
+	}
+
+	@media (min-width: 1200px) {
+		display: none;
+	}
+}

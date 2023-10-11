@@ -1,0 +1,6 @@
+query LoginClientsQuery {
+	loginClients {
+		provider
+		authorizationUrl
+	}
+}

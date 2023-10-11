@@ -1,0 +1,25 @@
+.root {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 26px;
+	height: 26px;
+	flex-shrink: 0;
+}
+
+.prevIcon {
+	width: 10px;
+	height: 16px;
+}
+
+.nextIcon {
+	width: 11px;
+	height: 16px;
+}

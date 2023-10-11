@@ -1,0 +1,18 @@
+query GalleryCategories {
+	galleryCategories(where: { parent: 0 }) {
+		edges {
+			node {
+				databaseId
+				name
+				children {
+					edges {
+						node {
+							databaseId
+							name
+						}
+					}
+				}
+			}
+		}
+	}
+}

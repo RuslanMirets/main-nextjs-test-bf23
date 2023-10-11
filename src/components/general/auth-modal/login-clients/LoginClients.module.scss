@@ -1,0 +1,14 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	a {
+		display: inline-block;
+		width: 100%;
+
+		button {
+			width: 100%;
+		}
+	}
+}

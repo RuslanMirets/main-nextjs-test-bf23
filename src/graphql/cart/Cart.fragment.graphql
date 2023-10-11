@@ -1,0 +1,33 @@
+fragment Cart on Cart {
+	total(format: RAW)
+	isEmpty
+	appliedCoupons {
+		code
+		discountAmount(format: RAW)
+	}
+	contents(first: 99) {
+		itemCount
+		productCount
+		edges {
+			node {
+				key
+				quantity
+				total(format: RAW)
+				product {
+					node {
+						databaseId
+						title
+						featuredImage {
+							node {
+								sourceUrl
+							}
+						}
+						... on SimpleProduct {
+							price(format: RAW)
+						}
+					}
+				}
+			}
+		}
+	}
+}

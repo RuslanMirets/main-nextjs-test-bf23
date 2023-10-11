@@ -1,0 +1,13 @@
+query PostBySlugQuery($id: ID!) {
+	post(id: $id, idType: SLUG) {
+		databaseId
+		title
+		slug
+		featuredImage {
+			node {
+				sourceUrl
+			}
+		}
+		content
+	}
+}

@@ -1,0 +1,219 @@
+query Page2DBQuery {
+	page(id: "102637", idType: DATABASE_ID) {
+		databaseId
+		title
+		seo {
+			title
+			description
+		}
+		page2db {
+			intro {
+				title
+				text
+				image {
+					sourceUrl
+				}
+				author
+				buttons {
+					title
+					link
+					type
+				}
+			}
+			info {
+				list {
+					title
+					value
+				}
+			}
+			levels {
+				title
+				level {
+					title
+					value
+				}
+				list {
+					title
+					description
+					image {
+						sourceUrl
+					}
+				}
+				button {
+					title
+					link
+				}
+			}
+			background {
+				title1
+				image1 {
+					sourceUrl
+				}
+				title2
+				image2 {
+					sourceUrl
+				}
+			}
+			learning {
+				title
+				list {
+					title
+					description
+					image {
+						sourceUrl
+					}
+				}
+			}
+			training {
+				title
+				list {
+					title
+					description
+					image {
+						sourceUrl
+					}
+				}
+			}
+			road {
+				title
+				description
+				list {
+					title
+					salary
+					years
+				}
+				image {
+					sourceUrl
+				}
+				info
+			}
+			result {
+				title
+				list {
+					title
+					description
+				}
+				button {
+					title
+					link
+				}
+			}
+			worksStudents {
+				title
+				list {
+					name
+					image {
+						sourceUrl
+					}
+				}
+			}
+			program {
+				title
+				list {
+					title
+					caption
+					description
+					image {
+						sourceUrl
+					}
+				}
+			}
+			worksTeachers {
+				title
+				list {
+					name
+					image {
+						sourceUrl
+					}
+				}
+			}
+			teachers {
+				title
+				list {
+					image {
+						sourceUrl
+					}
+					background {
+						sourceUrl
+					}
+					title
+					description
+					portfolio
+				}
+			}
+			reviews {
+				title
+				list {
+					name
+					text
+					image {
+						sourceUrl
+					}
+				}
+			}
+			buy {
+				title
+				price
+				installment
+				conditions {
+					condition
+					mentorName
+					mentorImage {
+						sourceUrl
+					}
+					productId
+				}
+				privacy
+				agreement
+				buttons {
+					title
+					type
+				}
+			}
+			payment {
+				corporate {
+					title
+					description
+					benefit
+					buttons {
+						title
+						link
+						type
+					}
+				}
+				installment {
+					title
+					description
+					button {
+						title
+						link
+					}
+				}
+				tax {
+					title
+					description
+				}
+			}
+			feedback {
+				title
+				text
+				image {
+					sourceUrl
+				}
+				button {
+					title
+				}
+				emails {
+					email
+				}
+			}
+			faq {
+				title
+				list {
+					title
+					description
+				}
+			}
+		}
+	}
+}

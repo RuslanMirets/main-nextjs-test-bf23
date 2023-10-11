@@ -1,0 +1,146 @@
+.root {
+	padding: 20px 0;
+
+	@media (min-width: 768px) {
+		padding: 50px 0;
+	}
+}
+
+.blocks {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	@media (min-width: 768px) {
+		gap: 20px;
+	}
+
+	@media (min-width: 1160px) {
+		gap: 30px;
+	}
+}
+
+.block {
+	padding: 20px 10px;
+	border: 1px solid #000;
+	border-radius: 10px;
+	display: grid;
+	gap: 20px;
+	font-size: 14px;
+
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+		border: 2px solid #000;
+	}
+
+	@media (min-width: 1024px) {
+		padding: 20px;
+		font-size: 16px;
+	}
+
+	@media (min-width: 1160px) {
+		padding: 40px;
+		font-size: 20px;
+	}
+}
+
+.left,
+.right {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+.subtitle {
+	font-size: 20px;
+	font-weight: 700;
+
+	@media (min-width: 768px) {
+		font-size: 24px;
+	}
+
+	@media (min-width: 1160px) {
+		font-size: 40px;
+	}
+}
+
+.content {
+	ul {
+		margin-left: 1.2em;
+		list-style-type: disc;
+	}
+	li {
+		margin: 5px 0;
+	}
+}
+
+.buttons {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+
+	&.buttonsMobile {
+		@media (min-width: 768px) {
+			display: none;
+		}
+	}
+
+	&.buttonsDesktop {
+		display: none;
+
+		@media (min-width: 768px) {
+			display: flex;
+			justify-content: flex-start;
+		}
+	}
+
+	.button {
+		width: 45%;
+		text-align: center;
+	}
+}
+
+.button {
+	display: inline-block;
+	padding: 12px 20px;
+	font-size: 12px;
+	border-radius: 10px;
+
+	@media (min-width: 768px) {
+		font-size: 14px;
+	}
+
+	@media (min-width: 1160px) {
+		font-size: 24px;
+	}
+
+	&.buttonSilver {
+		background: #969696;
+		color: #fff;
+	}
+
+	&.buttonSolid {
+		background: #fb7242;
+		color: #fff;
+	}
+
+	&.buttonOutline {
+		padding: 10px 20px;
+		border: 2px solid #fb7242;
+	}
+}
+
+.background {
+	height: 100%;
+	margin: 0 auto;
+	aspect-ratio: 15 / 10;
+	background: url(assets/ring.png) center / contain no-repeat;
+	display: none;
+
+	@media (min-width: 768px) {
+		display: block;
+	}
+}

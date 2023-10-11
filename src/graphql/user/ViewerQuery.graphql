@@ -1,0 +1,8 @@
+query ViewerQuery {
+	viewer {
+		databaseId
+		email
+		name
+		username
+	}
+}

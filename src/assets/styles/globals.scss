@@ -1,0 +1,35 @@
+body.lock {
+	overflow: hidden;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img,
+svg {
+	object-fit: cover;
+}
+
+input {
+	&:focus-visible {
+		outline: none;
+	}
+}
+
+a {
+	outline: none;
+}
+
+section {
+	scroll-margin-top: 50px;
+
+	@media (min-width: 1200px) {
+		scroll-margin-top: 81px;
+	}
+}
+
+.fancybox__container {
+	z-index: 99999 !important;
+}

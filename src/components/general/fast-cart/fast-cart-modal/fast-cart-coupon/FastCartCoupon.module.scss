@@ -1,0 +1,25 @@
+.root {
+	padding: 24px 16px;
+	border: 1px solid #ccc;
+	border-radius: 16px;
+}
+
+.text {
+	margin-bottom: 16px;
+}
+
+.group {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 30px;
+
+	@media (min-width: 768px) {
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+.button {
+	flex-shrink: 0;
+}

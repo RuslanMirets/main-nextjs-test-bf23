@@ -1,0 +1,27 @@
+.root {
+	margin-bottom: 50px;
+}
+
+.title {
+	margin-bottom: 24px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.inputs {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.inputGroup {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+
+	@media (min-width: 768px) {
+		flex-direction: row;
+	}
+}

@@ -1,0 +1,14 @@
+query PostsQuery {
+	posts(where: { categoryNotIn: "366" }, first: 999) {
+		nodes {
+			databaseId
+			title
+			slug
+			featuredImage {
+				node {
+					sourceUrl
+				}
+			}
+		}
+	}
+}

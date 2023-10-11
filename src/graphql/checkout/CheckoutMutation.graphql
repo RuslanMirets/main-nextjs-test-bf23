@@ -1,0 +1,34 @@
+mutation CheckoutMutation(
+	$paymentMethod: String
+	$firstName: String
+	$lastName: String
+	$email: String
+	$phone: String
+) {
+	checkout(
+		input: {
+			paymentMethod: $paymentMethod
+			billing: {
+				firstName: $firstName
+				lastName: $lastName
+				email: $email
+				phone: $phone
+			}
+		}
+	) {
+		clientMutationId
+		order {
+			id
+			orderKey
+			orderNumber
+			status
+			refunds {
+				nodes {
+					amount
+				}
+			}
+		}
+		result
+		redirect
+	}
+}

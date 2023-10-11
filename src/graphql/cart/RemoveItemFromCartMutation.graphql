@@ -1,0 +1,7 @@
+mutation RemoveItemFromCartMutation($keys: [ID]) {
+	removeItemsFromCart(input: { keys: $keys }) {
+		cart {
+			...Cart
+		}
+	}
+}

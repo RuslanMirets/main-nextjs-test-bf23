@@ -1,0 +1,6 @@
+mutation RefreshTokenMutation($refreshToken: String!) {
+	refreshToken(input: { refreshToken: $refreshToken }) {
+		authToken
+		success
+	}
+}

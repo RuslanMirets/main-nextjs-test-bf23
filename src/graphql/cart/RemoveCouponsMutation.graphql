@@ -1,0 +1,7 @@
+mutation RemoveCouponsMutation($codes: [String]) {
+	removeCoupons(input: { codes: $codes }) {
+		cart {
+			...Cart
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.root {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	transition: background-color 0.2s ease-in-out;
+
+	svg {
+		color: #575757;
+		transition: color 0.2s ease-in-out;
+	}
+
+	.spinner {
+		transition: color 0.2s ease-in-out;
+	}
+
+	&:hover {
+		background-color: #e53e3e;
+
+		svg {
+			color: #fff;
+		}
+
+		.spinner {
+			color: #fff;
+		}
+	}
+}
