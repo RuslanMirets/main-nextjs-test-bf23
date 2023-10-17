@@ -39,6 +39,13 @@ const FastCartTable: FC<Props> = ({ cart }) => {
 					<Tbody>
 						{cartItems?.map((item) => {
 							const product = item.product?.node;
+
+							const productDiscount =
+								product?.__typename === "SimpleProduct"
+									? Number(product.price) -
+									  Number(item.total) / Number(item.quantity)
+									: 0;
+
 							return (
 								<Tr key={item.key}>
 									<Td>
@@ -61,9 +68,14 @@ const FastCartTable: FC<Props> = ({ cart }) => {
 									</Td>
 									<Td>
 										<div>
-											{item.product?.node.__typename == "SimpleProduct" &&
-												item.product.node.price}{" "}
-											₽
+											<div>{Number(item.total).toFixed(2)} ₽</div>
+											{product?.__typename === "SimpleProduct" &&
+												Number(product.price) >
+													Number(item.total) / Number(item.quantity) && (
+													<div className={styles.productDiscount}>
+														Скидка: {productDiscount.toFixed(2)} ₽
+													</div>
+												)}
 										</div>
 									</Td>
 									<Td>
@@ -97,7 +109,7 @@ const FastCartTable: FC<Props> = ({ cart }) => {
 							<Th></Th>
 							<Th></Th>
 							<Th>
-								<div className={styles.total}>Всего: {cart?.total} ₽</div>
+								<div className={styles.cartTotal}>Всего: {cart?.total} ₽</div>
 							</Th>
 						</Tr>
 					</Tfoot>

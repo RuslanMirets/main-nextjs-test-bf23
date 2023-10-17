@@ -17,6 +17,7 @@ import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import { manrope } from "@/components/layouts/main-layout/MainLayout";
 import { CartQuery } from "@/graphql/cart/__generated__/CartQuery";
 import { useCheckoutMutation } from "@/graphql/checkout/__generated__/CheckoutMutation";
+import { useComplexCoursesQuery } from "@/graphql/product/__generated__/ComplexCoursesQuery";
 import styles from "./FastCartModal.module.scss";
 import FastCartCoupon from "./fast-cart-coupon/FastCartCoupon";
 import FastCartExpansion from "./fast-cart-expansion/FastCartExpansion";
@@ -76,9 +77,13 @@ const FastCartModal: FC<Props> = ({ cart, isOpen, onClose }) => {
 		});
 	};
 
+	const { data: complexCourses } = useComplexCoursesQuery();
+
 	const isComplexCourse = cart?.contents?.edges.some((content) => {
 		const databaseId = content.node.product?.node.databaseId;
-		return [102930].includes(Number(databaseId));
+		return complexCourses?.products?.edges.map(
+			(product) => product.node.databaseId === databaseId,
+		);
 	});
 
 	return (

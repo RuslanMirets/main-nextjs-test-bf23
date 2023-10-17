@@ -1,0 +1,10 @@
+query ComplexCoursesQuery {
+	products(where: { categoryId: 421 }) {
+		edges {
+			node {
+				databaseId
+				name
+			}
+		}
+	}
+}
